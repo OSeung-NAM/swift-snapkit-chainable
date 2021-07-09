@@ -9,11 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var headerWrap:UIView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        setUpViews()
+        
+
     }
-
-
 }
+
 
