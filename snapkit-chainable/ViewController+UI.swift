@@ -13,8 +13,8 @@ extension ViewController {
             .add(to: view)
             .background(color: .yellow)
             .constrain({ maker in
-                maker.width.equalTo(300)
-                maker.height.equalTo(300)
+                maker.width.equalTo(400)
+                maker.height.equalTo(400)
                 maker.center.equalToSuperview()
             }).origin
     }
