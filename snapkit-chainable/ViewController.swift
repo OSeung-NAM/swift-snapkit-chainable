@@ -20,7 +20,10 @@ class ViewController: UIViewController {
     }
 }
 
-
+/*
+ UIKit -> SwiftUI 변환
+ Xcode Previews 기능
+ */
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 @available(iOS 13.0, *)
