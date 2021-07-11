@@ -12,6 +12,8 @@ import RxCocoa
 
 extension Reactive where Base: UIView {
     var didMoveToSuperview: ControlEvent<Void> {
+        //sentMessage : 메소드가 호출 되기 전 실행
+        //methodInvoked : 호출된 후 실행
         let event = methodInvoked(#selector(Base.didMoveToSuperview)).map { _ in }
         return ControlEvent(events: event)
     }
