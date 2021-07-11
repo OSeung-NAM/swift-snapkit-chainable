@@ -8,15 +8,31 @@
 import UIKit
 
 extension ViewController {
-    func setUpViews() {
-        headerWrap = UIView().chain
+    func setupViews() {
+         _ = UIView().chain
             .add(to: view)
-            .background(color: .yellow)
-            .constrain({ maker in
-                maker.width.equalTo(200)
-                maker.height.equalTo(200)
-                maker.center.equalToSuperview()
-            }).origin
+            .background(color: .blue)
+            .constrain { make in
+                make.size.equalTo(100)
+                make.centerX.equalToSuperview()
+                make.top.equalTo(self.view.safeAreaLayoutGuide)
+            }
+            .add(children:
+                    UIView().chain
+                    .background(color: .yellow)
+                    .constrain({ make in
+                        make.size.equalTo(50)
+                        make.center.equalToSuperview()
+                    })
+                 ,
+                 UIView().chain
+                    .background(color: .brown)
+                    .constrain({ make in
+                        make.size.equalTo(20)
+                        make.center.equalToSuperview()
+                    })
+            )
+            .origin
     }
 }
 
@@ -47,4 +63,4 @@ struct MainVcPreview: PreviewProvider {
     } }
 }
 #endif
- 
+
